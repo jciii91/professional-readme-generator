@@ -1,14 +1,16 @@
 // TODO: Include packages needed for this application
 const inquirer = require("inquirer");
+const fs = require("fs/promises");
+const generateMarkdown = require("./utils/generateMarkdown");
 
 // TODO: Create an array of questions for user input
 const questions = [
     {
         type: 'input',
-        name: 'name',
+        name: 'proj',
         message: 'What is the name of your project? (Required)',
-        validate: nameInput => {
-            if (nameInput) {
+        validate: projInput => {
+            if (projInput) {
                 return true;
             } else {
                 console.log('Please enter a project name.');
@@ -122,18 +124,27 @@ const promptUser = () => {
             inquirer.prompt(subQuestions)
                 .then(data => {
                     user = {
-                        name: answers.name,
+                        proj: answers.proj,
                         github: answers.github,
                         email: answers.email
                     }
-                    console.log(user);
-                    console.log(data);
+                    return generateMarkdown(user,data);
+                })
+                .then(readme => {
+                    writeToFile("./dist/README.md",readme);
                 })
         });
 };
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, err => {
+        if (err) {
+            console.log(err);
+            return;
+        }
+    })
+}
 
 // TODO: Create a function to initialize app
 function init() {
