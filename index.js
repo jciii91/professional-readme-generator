@@ -92,10 +92,43 @@ const checkboxQuestions = [
 const promptUser = () => {
     return inquirer.prompt(questions)
         .then(answers => {
+            let subQuestions = [];
             userSelections = answers.selections;
             userSelections.forEach(element => {
-                console.log(element);
+                switch (element) {
+                    case "Description":
+                    subQuestions.push(checkboxQuestions[0]);
+                    break;
+                    case "Installation":
+                    subQuestions.push(checkboxQuestions[1]);
+                    break;
+                    case "Usage":
+                    subQuestions.push(checkboxQuestions[2]);
+                    break;
+                    case "License":
+                    subQuestions.push(checkboxQuestions[3]);
+                    break;
+                    case "Contributing":
+                    subQuestions.push(checkboxQuestions[4]);
+                    break;
+                    case "Tests":
+                    subQuestions.push(checkboxQuestions[5]);
+                    break;
+                    case "Questions":
+                    subQuestions.push(checkboxQuestions[6]);
+                    break;
+                }
             })
+            inquirer.prompt(subQuestions)
+                .then(data => {
+                    user = {
+                        name: answers.name,
+                        github: answers.github,
+                        email: answers.email
+                    }
+                    console.log(user);
+                    console.log(data);
+                })
         });
 };
 
