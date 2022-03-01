@@ -70,9 +70,10 @@ const checkboxQuestions = [
         message: 'Enter usage instructions for your project.',
     },
     {
-        type: 'input',
+        type: 'list',
         name: 'license',
-        message: 'Enter license information for your project.',
+        message: 'Select a license for your project.',
+        choices: ['IBM Public License Version 1.0','ISC License (ISC)','The MIT License','Mozilla Public License','Other']
     },
     {
         type: 'input',
