@@ -98,6 +98,9 @@ ${licenseLink}
 
 ${data.questions}
 
+- https://github.com/${user.github}
+- ${user.email}
+
 `;
 }
 

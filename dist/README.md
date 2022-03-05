@@ -1,10 +1,10 @@
 # asd
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: IPL 1.0](https://img.shields.io/badge/License-IPL_1.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)
 
 ## Description
 
-undefined
+asd
 
 ## Table of Contents
 
@@ -17,27 +17,30 @@ undefined
 
 ## Installation
 
-undefined
+asd
 
 ## Usage
 
-undefined
+asda
 
 ## Contribution Guidelines
 
-undefined
+sd
 
 ## Testing Instructions
 
-undefined
+asda
 
 ## License
 
-The MIT License is a permissive free software license originating at the Massachusetts Institute of Technology in the late 1980s. As a permissive license, it puts only very limited restriction on reuse and has, therefore, high license compatibility.
+The IBM Public License is a free open-source software license written and occasionally used by IBM. It is approved by the Free Software Foundation and described as an "open-source license" by the Open Source Initiative.
 
-[The MIT License](https://opensource.org/licenses/MIT)
+[IBM Public License Version 1.0](https://opensource.org/licenses/IPL-1.0)
 
 ## Questions
 
-undefined
+sd
+
+- https://github.com/asd
+- asd
 
