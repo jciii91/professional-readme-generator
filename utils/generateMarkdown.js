@@ -61,7 +61,7 @@ ${badgeLink}
 
 ## Description
 
-${data.description}
+${(data.description === undefined ? "" : data.description)}
 
 ## Table of Contents
 
@@ -74,19 +74,19 @@ ${data.description}
 
 ## Installation
 
-${data.installation}
+${(data.installation === undefined ? "" : data.installation)}
 
 ## Usage
 
-${data.usage}
+${(data.usage === undefined ? "" : data.usage)}
 
 ## Contribution Guidelines
 
-${data.contributions}
+${(data.contributions === undefined ? "" : data.contributions)}
 
 ## Testing Instructions
 
-${data.test}
+${(data.test === undefined ? "" : data.test)}
 
 ## License
 
@@ -96,7 +96,7 @@ ${licenseLink}
 
 ## Questions
 
-${data.questions}
+${(data.questions === undefined ? "" : data.questions)}
 
 - https://github.com/${user.github}
 - ${user.email}
