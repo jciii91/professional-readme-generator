@@ -6,6 +6,8 @@
 
 This application asks the user a series of questions to obtain the information required for generating a comprehensive README file to be used with a given project.
 
+[Click here to watch a demo video](https://watch.screencastify.com/v/CWTBQcpPbm5k4YXtrxZN)
+
 ## Table of Contents
 
 - [Installation](#installation)
