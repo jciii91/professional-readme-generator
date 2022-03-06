@@ -53,6 +53,7 @@ const questions = [
     }
 ];
 
+// requests more information based on user selections
 const checkboxQuestions = [
     {
         type: 'input',
@@ -92,8 +93,10 @@ const checkboxQuestions = [
     }
 ]
 
+//ask user initial questions
 const promptUser = () => {
     return inquirer.prompt(questions)
+        //load in followup questions
         .then(answers => {
             let subQuestions = [];
             userSelections = answers.selections;
@@ -122,6 +125,7 @@ const promptUser = () => {
                     break;
                 }
             })
+            //get answers to followup questions
             inquirer.prompt(subQuestions)
                 .then(data => {
                     user = {
@@ -129,8 +133,10 @@ const promptUser = () => {
                         github: answers.github,
                         email: answers.email
                     }
+                    //create README
                     return generateMarkdown(user,data);
                 })
+                //write to file
                 .then(readme => {
                     writeToFile("./dist/README.md",readme);
                 })

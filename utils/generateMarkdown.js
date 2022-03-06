@@ -51,10 +51,14 @@ function renderLicenseSection(license) {
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(user,data) {
+    //get and set badge info if necessary
     badgeLink = renderLicenseBadge(data.license);
     licenseLink = renderLicenseLink(data.license);
     renderedLicense = renderLicenseSection(data.license);
 
+//return markdown string to use for README
+//ternary operations test for undefined sections and replaced 'undefined' with blank strings
+//table of contents links to corresponding sections
 return `# ${user.proj}
 
 ${badgeLink}
